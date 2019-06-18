@@ -35,13 +35,19 @@ function description2(){
         showthis.style.display = 'none';
     }
 }
-
-
 //You'll need to:
 // create a div element with an id of 'descrip2'
 //append this element to the div element with the id of 'name2' 
 
 //4. Add events to the all the thumbs up icon that will add a count for each time the icon is clicked on for any shoe.
+let thumbsup = document.querySelectorAll('#thumbs')
+for (let i=0;i<thumbsup.length;i++){
+    thumbsup[i].innerHTML = 0;
+    thumbsup[i].addEventListener('click', thumbcount);
+}
+function thumbcount(event){
+    event.target.innerHTML++;
+}
 
 //5. Add an event to the plus icon that will increment the price of the Air Jordan V shoe each time the icon is clicked on.
 
