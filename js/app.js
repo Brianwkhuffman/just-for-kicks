@@ -50,6 +50,14 @@ function thumbcount(event){
 }
 
 //5. Add an event to the plus icon that will increment the price of the Air Jordan V shoe each time the icon is clicked on.
+let shoeprice = document.querySelector('#increase');
+shoeprice.addEventListener('click', priceraise);
+function priceraise(){
+    let x = document.getElementById('price4');
+    console.log(x);
+    console.log(x.childNodes)
+    x.childNodes[0].nodeValue++;
+}
 
 //6. Add an event to the minus icon that will decrement the price of the Air Jordan VI shoe each time the icon is clicked on.
 
