@@ -19,6 +19,22 @@ function description1(){
 
 //3. Add an event to the div element with the id of 'name2' that will show/hide the following description after clicking on the element.
 //'The instantly recognizable Jumpman silhouette made its debut with the Air Jordan 3 during Michael Jordan's 1987-88 NBA season.'
+let nameDiv2 = document.querySelector('#name2');
+
+let newdescrip = document.createElement('div');
+newdescrip.id = 'descrip2';
+newdescrip.innerHTML = "The instantly recognizable Jumpman silhouette made its debut with the Air Jordan 3 during Michael Jordan's 1987-88 NBA season."
+nameDiv2.appendChild(newdescrip);
+
+nameDiv2.addEventListener('click', description2);
+function description2(){
+    let showthis = this.querySelector('#descrip2');
+    if (showthis.style.display === 'none'){
+        showthis.style.display = 'block';
+    }else{
+        showthis.style.display = 'none';
+    }
+}
 
 
 //You'll need to:
