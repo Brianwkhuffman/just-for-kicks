@@ -95,5 +95,19 @@ function increaseSize(){
 }
 
 //9. Add events to both the plus and minus icon that will add or decrease the price each time the respective icon is clicked on.
+let xivIncrease = document.querySelector('#oneUp');
+let xivDecrease = document.querySelector('#oneDown');
+let priceEight = document.querySelector('#price8');
+
+
+xivIncrease.addEventListener('click', goUp);
+xivDecrease.addEventListener('click', goDown);
+
+function goUp(){
+    priceEight.childNodes[0].nodeValue = Number(priceEight.childNodes[0].nodeValue) + 100;
+}
+function goDown(){
+    priceEight.childNodes[0].nodeValue = Number(priceEight.childNodes[0].nodeValue) - 100;
+}
 
 //10. Add an event to the Air Jordan XXVIII shoe that will show the famous 'crying Michael Jordan' meme after clicking on the image.
