@@ -111,3 +111,13 @@ function goDown(){
 }
 
 //10. Add an event to the Air Jordan XXVIII shoe that will show the famous 'crying Michael Jordan' meme after clicking on the image.
+let cryJordan = airJordanBlock3[2].childNodes[0];
+cryJordan.addEventListener('click', plzCry);
+
+function plzCry(){
+    if (cryJordan.src === 'https://www.flightclub.com/media/catalog/product/cache/1/image/1600x1140/9df78eab33525d08d6e5fb8d27136e95/a/i/air-jordan-28-photo-blue-white-black-011977_1.jpg'){
+        cryJordan.src = 'https://i.kym-cdn.com/photos/images/original/001/111/532/680.jpg';
+    }else{
+        cryJordan.src = 'https://www.flightclub.com/media/catalog/product/cache/1/image/1600x1140/9df78eab33525d08d6e5fb8d27136e95/a/i/air-jordan-28-photo-blue-white-black-011977_1.jpg';
+    }
+}
